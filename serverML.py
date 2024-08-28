@@ -1,5 +1,5 @@
 #Librerias
-from flask import Flask, request, jsonfy, render_template
+from Flask import Flask, request, jsonfy, render_template
 import numpy as np
 import joblib
 #Files management
