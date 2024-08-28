@@ -1,5 +1,5 @@
 #Librerias
-from flask import Flask, request, jsonfy, render_template
+from flask import Flask, request, jsonify, render_template
 import numpy as np
 import joblib
 #Files management
@@ -25,6 +25,6 @@ def predictjson():
     #predecir utilizando la entrada y el modelo
     result = dt.predict(inputData.reshape(1,-1))
     #Enviar respuesta
-    return jsonfy({'Prediction': str(result[0])})
+    return jsonify({'Prediction': str(result[0])})
 if __name__ == '__main__':
     server.run(debug=False, host='0.0.0.0', port=8080)
